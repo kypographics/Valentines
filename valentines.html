@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="lantern-container"></div>
+    <div id="petal-container"></div>
+    <div id="fireworks-container"></div>
+
+    <nav>
+        <div class="nav-glass">
+            <button id="btn-home" class="active" onclick="show('home')">Home</button>
+            <button id="btn-letter" onclick="show('letter')">The Letter</button>
+            <button id="btn-flowers" onclick="show('flowers')">The Bloom</button>
+        </div>
+    </nav>
+
+    <main class="stage">
+        <section id="home" class="scene active">
+            <h1 class="glow-text">Happy Valentine's</h1>
+            <p>A magical surprise, just for you.</p>
+        </section>
+
+        <section id="letter" class="scene">
+            <div id="letter-closed" class="letter-placeholder">
+                <button class="action-btn" onclick="revealLetter()">Open My Letter</button>
+            </div>
+            
+            <div id="letter-open" class="letter-card hidden">
+                <div class="letter-inner">
+                    <h2>Happy Valentine’s Day, my baby!</h2>
+                    <p>Our first Valentine’s together feels like the beginning of something endless — like infinity, where there’s no finish line, only more moments, more memories, more love waiting for us. Being with you has changed me in the best ways, and every day I’m grateful that our paths crossed.</p>
+                    <p>Thank you for being you.</p>
+                    <p class="signature">— Forever Yours
+                    </br> <i>-kylieboo</i>
+                </p>
+        
+                    <button class="small-btn" onclick="hideLetter()">Close Letter</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="flowers" class="scene">
+            <div class="garden-container">
+                <div class="garden" id="garden">
+                    </div>
+                <div class="grass-bed"></div>
+            </div>
+            <button class="action-btn bloom-trigger" id="bloomBtn" onclick="startBloom()">Press to Bloom</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
